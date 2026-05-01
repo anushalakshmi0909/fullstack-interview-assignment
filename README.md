@@ -1,19 +1,26 @@
-# WhatsApp Web Clone
+# 💬 WhatsApp Web Clone
 
-A simplified WhatsApp Web clone built using React.js, Node.js, Express.js, MongoDB, and Socket.IO.
+A simplified full-stack WhatsApp Web clone built using **React.js, Node.js, Express.js, MongoDB, and Socket.IO**, focusing on real-time chat functionality and clean application architecture.
 
-## Features
+---
+
+## ✨ Features
 
 - Simple username-based login
-- Supports multiple users
-- Two-panel WhatsApp Web-like layout
-- Send and receive text messages
-- Messages stored in MongoDB
-- Fetch chat history between users
-- Real-time message updates using Socket.IO
-- Messages persist after page refresh
+- Multi-user support
+- Two-panel WhatsApp Web-like interface
+- Chat sidebar with user list
+- Active chat highlighting
+- Send & receive text messages
+- Visual distinction between sent and received messages
+- Real-time messaging using Socket.IO
+- Persistent chat history (MongoDB)
+- Auto-scroll to latest message
+- Empty message validation
 
-## Tech Stack
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
 - React.js
@@ -25,12 +32,131 @@ A simplified WhatsApp Web clone built using React.js, Node.js, Express.js, Mongo
 ### Backend
 - Node.js
 - Express.js
-- MongoDB
+- MongoDB Atlas
 - Mongoose
 - Socket.IO
 
-## Project Structure
+---
+
+## 📁 Project Structure
 
 ```txt
-client/
-server/
+fullstack-interview-assignment/
+│
+├── client/        # React frontend
+├── server/        # Node.js backend
+├── README.md
+└── .gitignore```
+
+## ⚙️ Prerequisites
+
+Make sure you have installed:
+
+- Node.js
+- npm
+- MongoDB Atlas account
+
+---
+
+## 🔐 Environment Variables
+
+### Backend (`server/.env`)
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_atlas_connection_string
+CLIENT_URL=http://localhost:5173
+
+
+Frontend (client/.env)
+VITE_API_URL=http://localhost:5000/api
+VITE_SOCKET_URL=http://localhost:5000
+
+
+☁️ MongoDB Atlas Setup
+Create a free MongoDB Atlas cluster
+Create a database user
+Allow network access (0.0.0.0/0 for development)
+Copy the connection string
+Add it to server/.env as MONGO_URI
+Example
+MONGO_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/whatsapp_clone?retryWrites=true&w=majority
+
+🚀 How to Run Locally
+1. Clone the Repository
+git clone <your-repository-url>
+cd fullstack-interview-assignment
+2. Run Backend
+cd server
+npm install
+npm run dev
+
+Backend runs at:
+
+http://localhost:5000
+3. Run Frontend
+
+Open a new terminal:
+
+cd client
+npm install
+npm run dev
+
+Frontend runs at:
+
+http://localhost:5173
+🔗 API Endpoints
+👤 User APIs
+Method	Endpoint	Description
+POST	/api/users	Create or login user
+GET	/api/users	Fetch all users
+💬 Message APIs
+Method	Endpoint	Description
+POST	/api/messages	Send a message
+GET	/api/messages/:senderId/:receiverId	Fetch messages between two users
+🧪 Testing the Application
+Start backend and frontend servers
+Open http://localhost:5173
+Login as Anu
+Open another browser/incognito window
+Login as Lavanya
+Select user from sidebar
+Send messages
+Verify:
+Real-time updates ✅
+Messages persist after refresh ✅
+📂 Folder Details
+Client
+client/src/pages/Login.jsx
+client/src/pages/Chat.jsx
+client/src/components/Sidebar.jsx
+client/src/components/ChatWindow.jsx
+client/src/components/MessageBubble.jsx
+client/src/api/axios.js
+client/src/styles.css
+Server
+server/src/server.js
+server/src/config/db.js
+server/src/models/User.js
+server/src/models/Message.js
+server/src/routes/userRoutes.js
+server/src/routes/messageRoutes.js
+🚀 Future Improvements
+Typing indicator
+Online/offline status
+Authentication (JWT/password)
+Group chat support
+Message read receipts
+File/image sharing
+👩‍💻 Author
+
+Anushalakshmi S
+
+📁 Environment Example Files
+server/.env.example
+PORT=5000
+MONGO_URI=your_mongodb_atlas_connection_string
+CLIENT_URL=http://localhost:5173
+client/.env.example
+VITE_API_URL=http://localhost:5000/api
+VITE_SOCKET_URL=http://localhost:5000
