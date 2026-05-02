@@ -1,4 +1,4 @@
-```md
+
 # 💬 WhatsApp Web Clone
 
 A simplified full-stack WhatsApp Web clone built using **React.js, Node.js, Express.js, MongoDB, and Socket.IO**, focusing on real-time chat functionality and clean application architecture.
