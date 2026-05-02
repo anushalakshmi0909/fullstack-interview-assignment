@@ -4,6 +4,13 @@
 A simplified full-stack WhatsApp Web clone built using **React.js, Node.js, Express.js, MongoDB, and Socket.IO**, focusing on real-time chat functionality and clean application architecture.
 
 ---
+## 📌 Project Overview
+
+This project is a simplified clone of WhatsApp Web built to demonstrate full-stack development, real-time communication using WebSockets, and scalable backend API design.
+
+It allows multiple users to chat in real-time with persistent message storage using MongoDB.
+
+---
 
 ## ✨ Features
 
@@ -222,4 +229,8 @@ CLIENT_URL=http://localhost:5173
 VITE_API_URL=http://localhost:5000/api
 VITE_SOCKET_URL=http://localhost:5000
 ```
-```
+## 📝 Submission Note
+
+This project was developed as part of a full-stack developer assessment. The focus was on building a clean, functional, and well-structured application within a limited timeframe.
+
+Additional enhancements are being explored in separate branches.
